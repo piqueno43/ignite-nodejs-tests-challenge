@@ -7,7 +7,7 @@ let connection: Connection;
 
 describe("Create Statement Controller", () => {
   beforeAll(async() =>{
-    connection = await  createConnection();
+    connection = await createConnection();
     await connection.runMigrations();
   })
 
