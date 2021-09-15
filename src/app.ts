@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import 'express-async-errors';
-
+import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 
@@ -10,6 +10,8 @@ import { router } from './routes';
 import { AppError } from './shared/errors/AppError';
 
 const app = express();
+
+dotenv.config()
 
 app.use(cors());
 app.use(express.json());
